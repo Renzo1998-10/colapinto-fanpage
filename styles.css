@@ -1,0 +1,418 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #111;
+    color: white;
+  }
+  /* Estilo para el header con imagen de fondo */
+header {
+    background: 
+      linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url('images/fondocolapinto.webp') no-repeat center center/cover;
+    padding: 60px 20px;
+    text-align: center;
+    color: white;
+  }
+  /* Posicionamiento del logo */
+.logo-link {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 10;
+  }
+  
+  .logo {
+    height: 250px;
+    width: auto;
+  }
+  
+  
+  /* Ajustes de tipografía */
+  h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #cccccce1;
+  text-align: center;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #444;
+  display: inline-block;
+  padding-bottom: 5px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+  }
+  h3{
+  font-size: 2rem;
+  font-weight: 600;
+  color: #cccccce1;
+  text-align: center;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #444;
+  display: inline-block;
+  padding-bottom: 5px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 3rem;
+  }
+  
+  header p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+  }
+  
+  nav {
+    text-align: center;
+    padding: 10px;
+  }
+  
+  nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+  }
+  
+  nav a:hover {
+    text-decoration: underline;
+  }
+  
+  section {
+    padding: 20px;
+    max-width: 1000px;
+    margin: auto;
+  }
+  
+  .galeria img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid white;
+    margin-bottom: 10px;
+  }
+  
+  .pie a {
+  margin: 0 10px;
+  color: #fff;
+  text-decoration: none;
+  
+}
+  .footer {
+    background-color: #222;
+    text-align: center;
+    padding: 20px;
+    color: #aaa;
+    text-decoration: none;
+  }
+
+  .txtFoot {
+    max-width: 1200px; 
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+  .copy {
+    font-size: 14px; 
+    color: #aaa;
+  }
+  
+
+  
+/*PAGINA DE CONTACTO*/
+.formulario-container {
+  background-color: #fff;
+  padding: 20px 25px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 360px;
+}
+
+form label {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: none;
+}
+
+form button {
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+form button:hover {
+  background-color: #0056b3;
+}
+
+
+/*resultados tabla*/
+    .tabla-f1 {
+      width: 100%;
+      max-width: 1000px;
+      margin: auto;
+      border-collapse: collapse;
+      box-shadow: 0 0 20px rgba(0,0,0,0.6);
+    }
+
+    .tabla-f1 th,
+    .tabla-f1 td {
+      padding: 12px 15px;
+      text-align: center;
+      border: 1px solid #333;
+    }
+
+    .tabla-f1 th {
+      background-color: #222;
+      color: #00d2ff;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .tabla-f1 tr:nth-child(even) {
+      background-color: #1a1a1a;
+    }
+
+    .tabla-f1 tr:hover {
+      background-color: #333;
+    }
+
+    .abandono {
+      color: #ff4c4c;
+      font-weight: bold;
+    }
+
+    /*Index*/
+    .destacados {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.card {
+  background-color: #1c1c1c;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(0,0,0,0.6);
+}
+
+.card h3 a {
+  color: #00d2ff;
+  text-decoration: none;
+  font-size: 1.4rem;
+}
+
+.card h3 a:hover {
+  text-decoration: underline;
+}
+
+.card p {
+  color: #ccc;
+  font-size: 0.95rem;
+  margin-top: 10px;
+}
+
+/*Video index*/
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  margin: 20px auto;
+}
+
+.video-container iframe, 
+.video-container object, 
+.video-container embed {
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/*Section carreras en index*/
+.carreras {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px 20px;
+  background-color: #1f1f1f;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.7);
+  color: #eee;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.carreras h2 {
+  font-size: 2.2rem;
+  color: #00d2ff;
+  margin-bottom: 25px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.carreras ul {
+  list-style: none;
+  padding-left: 0;
+  font-size: 1.2rem;
+}
+
+.carreras ul li {
+  background: linear-gradient(90deg, #00d2ff 0%, #3a47d5 100%);
+  padding: 12px 20px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(58, 71, 213, 0.6);
+  transition: background 0.3s ease;
+  cursor: default;
+}
+
+.carreras ul li strong {
+  font-weight: 700;
+  color: #fff;
+}
+
+.carreras ul li:hover {
+  background: linear-gradient(90deg, #3a47d5 0%, #00d2ff 100%);
+  box-shadow: 0 0 15px rgba(0, 210, 255, 0.8);
+}
+
+
+@media (max-width: 768px) {
+/* HEADER MOBILE */
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 15px;
+  text-align: center;
+}
+
+.logo {
+  max-width: 180px;
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px; 
+}
+
+header h1 {
+  margin: 0;
+  padding: 0 10px;
+  font-size: 1.8rem;
+  color: #fff;
+  z-index: 1;
+}
+header p {
+  font-size: 1rem;
+  color: #ccc;
+  margin-bottom: 15px;
+}
+
+ /* NAV MOBILE */
+nav {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  width: 100%;
+}
+
+nav a {
+  text-decoration: none;
+  color: #00d2ff;
+  font-weight: 500;
+  background-color: #222;
+  padding: 10px 20px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 300px;
+  text-align: center;
+}
+
+  /* Tarjetas destacadas */
+  .destacados {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 20px;
+  }
+
+  .card {
+    padding: 15px;
+  }
+
+  /* Entrevista / video */
+  .video-container {
+    padding-bottom: 56.25%; /* ya responsive */
+    height: 0;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .video-container iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* Lista de carreras */
+  .carreras ul {
+    padding: 0 15px;
+    font-size: 1rem;
+  }
+
+  .carreras h2,
+  .contenido h2 {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    padding: 20px;
+  }
+
+  .pie {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+  }
+
+  .pie a {
+    color: #00d2ff;
+    text-decoration: none;
+  }
+
+  .copy {
+    font-size: 0.85rem;
+    margin-top: 15px;
+  }
+}
