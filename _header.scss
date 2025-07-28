@@ -1,0 +1,11 @@
+header {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/fondocolapinto.webp') no-repeat center center/cover;
+  padding: 60px 20px;
+  text-align: center;
+  color: $color-text-main;
+}
+
+  h1 {
+    margin: 0;
+    font-size: 3rem;
+  }

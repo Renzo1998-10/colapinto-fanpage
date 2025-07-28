@@ -1,203 +1,685 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background-color: #111;
-    color: white;
-  }
-  /* Estilo para el header con imagen de fondo */
+/* VARIABLES */
+/* MIXINS */
 header {
-    background: 
-      linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      url('images/fondocolapinto.webp') no-repeat center center/cover;
-    padding: 60px 20px;
-    text-align: center;
-    color: white;
-  }
-  /* Posicionamiento del logo */
-.logo-link {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    z-index: 10;
-  }
-  
-  .logo {
-    height: 250px;
-    width: auto;
-  }
-  
-  
-  /* Ajustes de tipografía */
-  h2 {
-  font-size: 2rem;
-  font-weight: 600;
-  color: #cccccce1;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/fondocolapinto.webp") no-repeat center center/cover;
+  padding: 60px 20px;
   text-align: center;
-  margin-bottom: 15px;
-  border-bottom: 2px solid #444;
-  display: inline-block;
-  padding-bottom: 5px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    
-  }
-  h3{
-  font-size: 2rem;
-  font-weight: 600;
-  color: #cccccce1;
-  text-align: center;
-  margin-bottom: 15px;
-  border-bottom: 2px solid #444;
-  display: inline-block;
-  padding-bottom: 5px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    
-  }
-  
-  header h1 {
-    margin: 0;
-    font-size: 3rem;
-  }
-  
-  header p {
-    font-size: 1.2rem;
-    margin-top: 10px;
-  }
-  
-  nav {
-    text-align: center;
-    padding: 10px;
-  }
-  
-  nav a {
-    color: white;
-    margin: 0 15px;
-    text-decoration: none;
-  }
-  
-  nav a:hover {
-    text-decoration: underline;
-  }
-  
-  section {
-    padding: 20px;
-    max-width: 1000px;
-    margin: auto;
-  }
-  
-  .galeria img {
-    max-width: 100%;
-    height: auto;
-    border: 2px solid white;
-    margin-bottom: 10px;
-  }
-  
-  .pie a {
-  margin: 0 10px;
-  color: #fff;
-  text-decoration: none;
-  
+  color: white;
 }
-  .footer {
-    background-color: #222;
-    text-align: center;
-    padding: 20px;
-    color: #aaa;
-    text-decoration: none;
-  }
 
-  .txtFoot {
-    max-width: 1200px; 
-    margin: 0 auto;
-    margin-bottom: 20px;
-  }
-  .copy {
-    font-size: 14px; 
-    color: #aaa;
-  }
-  
+h1 {
+  margin: 0;
+  font-size: 3rem;
+}
 
-  
-/*PAGINA DE CONTACTO*/
+.pie a {
+  margin: 0 10px;
+  color: white;
+  text-decoration: none;
+}
+
+.footer {
+  background-color: #222;
+  text-align: center;
+  padding: 20px;
+  color: #aaa;
+  text-decoration: none;
+}
+
+.txtFoot {
+  max-width: 1200px;
+  margin: 0 auto 20px auto;
+}
+
+.copy {
+  font-size: 14px;
+  color: #aaa;
+}
+
 .formulario-container {
   background-color: #fff;
   padding: 20px 25px;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   width: 100%;
   max-width: 360px;
 }
-
-form label {
+.formulario-container label {
   display: block;
   margin-top: 15px;
   margin-bottom: 5px;
   color: #555;
 }
-
-form input,
-form textarea {
+.formulario-container input,
+.formulario-container textarea {
   width: 100%;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
   resize: none;
 }
-
-form button {
+.formulario-container button {
   margin-top: 20px;
   width: 100%;
-  padding: 12px;
-  background-color: #007bff;
+  background-color: #00d2ff;
   color: white;
+  animation: pulse 2s infinite;
+}
+.formulario-container button:hover {
+  background-color: #0056b3;
+  animation-play-state: paused;
+}
+
+/*Index*/
+@media (max-width: 768px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 15px;
+    text-align: center;
+  }
+  header .logo {
+    max-width: 180px;
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+  }
+  header h1 {
+    margin: 0;
+    padding: 0 10px;
+    font-size: 1.8rem;
+    color: white;
+    z-index: 1;
+  }
+  header p {
+    font-size: 1rem;
+    color: #ccc;
+    margin-bottom: 15px;
+  }
+  nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+  }
+  nav a {
+    text-decoration: none;
+    color: #00d2ff;
+    font-weight: 500;
+    background-color: #222;
+    padding: 10px 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 300px;
+    text-align: center;
+  }
+  .destacados {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 20px;
+  }
+  .destacados .card {
+    padding: 15px;
+  }
+  .video-container {
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    position: relative;
+  }
+  .video-container iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  .carreras ul {
+    padding: 0 15px;
+    font-size: 1rem;
+  }
+  .carreras h2,
+  .contenido h2 {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+  .footer {
+    text-align: center;
+    padding: 20px;
+  }
+  .pie {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+  }
+  .pie a {
+    color: #00d2ff;
+    text-decoration: none;
+  }
+  .copy {
+    font-size: 0.85rem;
+    margin-top: 15px;
+  }
+}
+/*Biografia*/
+@media (max-width: 768px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 15px;
+    text-align: center;
+  }
+  header .logo-link {
+    position: static;
+    margin-bottom: 15px;
+  }
+  header .logo {
+    max-width: 180px;
+    height: auto;
+  }
+  header h1 {
+    font-size: 1.8rem;
+    margin: 0 0 10px 0;
+  }
+  header p {
+    font-size: 1rem;
+    color: #ccc;
+    margin-bottom: 15px;
+  }
+  nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+  nav a {
+    text-decoration: none;
+    color: #00d2ff;
+    font-weight: 500;
+    background-color: #222;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 100%;
+    transition: background-color 0.3s ease;
+  }
+  nav a:hover {
+    background-color: rgb(59.5, 59.5, 59.5);
+  }
+  main {
+    padding: 10px 15px;
+  }
+  main section#bio p {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+  main section#bio h2, main section#bio h3 {
+    font-size: 1.5rem;
+  }
+  footer.footer {
+    padding: 15px 10px;
+    text-align: center;
+  }
+  footer.footer .txtFoot {
+    margin: 0 auto 15px auto;
+    max-width: 320px;
+  }
+  footer.footer .pie {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 15px;
+  }
+  footer.footer .pie a {
+    color: #00d2ff;
+    font-weight: 600;
+  }
+  footer.footer .copy {
+    font-size: 0.85rem;
+    margin-top: 10px;
+    color: #aaa;
+  }
+}
+/*Contacto*/
+@media (max-width: 768px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 15px;
+    text-align: center;
+  }
+  header .logo-link {
+    position: static;
+    margin-bottom: 15px;
+  }
+  header .logo {
+    max-width: 180px;
+    height: auto;
+  }
+  header h1 {
+    font-size: 1.8rem;
+    margin: 0 0 10px 0;
+  }
+  header p {
+    font-size: 1rem;
+    color: #ccc;
+    margin-bottom: 15px;
+  }
+  nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+  nav a {
+    text-decoration: none;
+    color: #00d2ff;
+    font-weight: 500;
+    background-color: #222;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 100%;
+    transition: background-color 0.3s ease;
+  }
+  nav a:hover {
+    background-color: rgb(59.5, 59.5, 59.5);
+  }
+  .formulario-container {
+    width: 90%;
+    max-width: 360px;
+    margin: 20px auto;
+    padding: 15px 20px;
+  }
+  .formulario-container h2 {
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  .formulario-container form label {
+    font-size: 1rem;
+  }
+  .formulario-container form input,
+  .formulario-container form textarea {
+    font-size: 1rem;
+    padding: 10px;
+  }
+  .formulario-container form button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+  }
+  footer.footer {
+    padding: 15px 10px;
+    text-align: center;
+  }
+  footer.footer .txtFoot {
+    margin: 0 auto 15px auto;
+    max-width: 320px;
+  }
+  footer.footer .pie {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 15px;
+  }
+  footer.footer .pie a {
+    color: #00d2ff;
+    font-weight: 600;
+  }
+  footer.footer .copy {
+    font-size: 0.85rem;
+    margin-top: 10px;
+    color: #aaa;
+  }
+}
+/*Galeria*/
+@media (max-width: 768px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 15px;
+    text-align: center;
+  }
+  header .logo-link {
+    position: static;
+    margin-bottom: 15px;
+  }
+  header .logo {
+    max-width: 180px;
+    height: auto;
+  }
+  header h1 {
+    font-size: 1.8rem;
+    margin: 0 0 10px 0;
+  }
+  header p {
+    font-size: 1rem;
+    color: #ccc;
+    margin-bottom: 15px;
+  }
+  nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+  nav a {
+    text-decoration: none;
+    color: #00d2ff;
+    font-weight: 500;
+    background-color: #222;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 100%;
+    transition: background-color 0.3s ease;
+  }
+  nav a:hover {
+    background-color: rgb(59.5, 59.5, 59.5);
+  }
+  section.galeria {
+    padding: 10px 15px;
+    max-width: 360px;
+    margin: 20px auto;
+  }
+  section.galeria h2 {
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  section.galeria img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    border: 2px solid white;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  }
+  footer.footer {
+    padding: 15px 10px;
+    text-align: center;
+  }
+  footer.footer .txtFoot {
+    margin: 0 auto 15px auto;
+    max-width: 320px;
+  }
+  footer.footer .pie {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 15px;
+  }
+  footer.footer .pie a {
+    color: #00d2ff;
+    font-weight: 600;
+  }
+  footer.footer .copy {
+    font-size: 0.85rem;
+    margin-top: 10px;
+    color: #aaa;
+  }
+}
+/*Resultados*/
+@media (max-width: 768px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 15px;
+    text-align: center;
+  }
+  header .logo-link {
+    position: static;
+    margin-bottom: 15px;
+  }
+  header .logo {
+    max-width: 180px;
+    height: auto;
+  }
+  header h1 {
+    font-size: 1.8rem;
+    margin: 0 0 10px 0;
+  }
+  header p {
+    font-size: 1rem;
+    color: #ccc;
+    margin-bottom: 15px;
+  }
+  nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+  nav a {
+    text-decoration: none;
+    color: #00d2ff;
+    font-weight: 500;
+    background-color: #222;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 100%;
+    transition: background-color 0.3s ease;
+  }
+  nav a:hover {
+    background-color: rgb(59.5, 59.5, 59.5);
+  }
+  main {
+    padding: 10px 15px;
+  }
+  main section.resultados {
+    max-width: 360px;
+    margin: 0 auto 20px auto;
+  }
+  main section.resultados h2 {
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  main section.resultados ul {
+    padding-left: 20px;
+    font-size: 1rem;
+  }
+  main section.resultados ul li {
+    margin-bottom: 10px;
+  }
+  main section {
+    max-width: 360px;
+    margin: 0 auto 30px auto;
+  }
+  main section h2 {
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  main section .tabla-f1 {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+    overflow-x: auto;
+    display: block;
+  }
+  main section .tabla-f1 thead {
+    background-color: #1c1c1c;
+  }
+  main section .tabla-f1 th,
+  main section .tabla-f1 td {
+    padding: 8px 6px;
+    border: 1px solid #444;
+    text-align: center;
+    white-space: nowrap;
+  }
+  main section .tabla-f1 td.abandono {
+    color: #ff4c4c;
+    font-weight: bold;
+  }
+  footer.footer {
+    padding: 15px 10px;
+    text-align: center;
+  }
+  footer.footer .txtFoot {
+    margin: 0 auto 15px auto;
+    max-width: 320px;
+  }
+  footer.footer .pie {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 15px;
+  }
+  footer.footer .pie a {
+    color: #00d2ff;
+    font-weight: 600;
+  }
+  footer.footer .copy {
+    font-size: 0.85rem;
+    margin-top: 10px;
+    color: #aaa;
+  }
+}
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 rgba(0, 210, 255, 0.7);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 210, 255, 0.9);
+  }
+}
+.pulse {
+  animation: pulse 2s infinite;
+}
+
+/* PLACEHOLDER (EXTEND) */
+.copy, .formulario-container button {
+  padding: 12px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
   font-size: 16px;
 }
 
-form button:hover {
-  background-color: #0056b3;
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #111;
+  color: white;
 }
 
+header {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/fondocolapinto.webp") no-repeat center center/cover;
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+header h1 {
+  margin: 0;
+  font-size: 3rem;
+}
+header p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
 
-/*resultados tabla*/
-    .tabla-f1 {
-      width: 100%;
-      max-width: 1000px;
-      margin: auto;
-      border-collapse: collapse;
-      box-shadow: 0 0 20px rgba(0,0,0,0.6);
-    }
+.logo-link {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 10;
+}
 
-    .tabla-f1 th,
-    .tabla-f1 td {
-      padding: 12px 15px;
-      text-align: center;
-      border: 1px solid #333;
-    }
+.logo {
+  height: 250px;
+  width: auto;
+}
 
-    .tabla-f1 th {
-      background-color: #222;
-      color: #00d2ff;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
+h2, h3 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: rgba(204, 204, 204, 0.88);
+  text-align: center;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #444;
+  display: inline-block;
+  padding-bottom: 5px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
 
-    .tabla-f1 tr:nth-child(even) {
-      background-color: #1a1a1a;
-    }
+nav {
+  text-align: center;
+  padding: 10px;
+}
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+}
+nav a:hover {
+  text-decoration: underline;
+}
 
-    .tabla-f1 tr:hover {
-      background-color: #333;
-    }
+section {
+  padding: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
 
-    .abandono {
-      color: #ff4c4c;
-      font-weight: bold;
-    }
+.galeria img {
+  max-width: 100%;
+  height: auto;
+  border: 2px solid white;
+  margin-bottom: 10px;
+}
 
-    /*Index*/
-    .destacados {
+.tabla-f1 {
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
+  border-collapse: collapse;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+}
+.tabla-f1 th,
+.tabla-f1 td {
+  padding: 12px 15px;
+  text-align: center;
+  border: 1px solid #333;
+}
+.tabla-f1 th {
+  background-color: #222;
+  color: #00d2ff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.tabla-f1 tr:nth-child(even) {
+  background-color: #1a1a1a;
+}
+.tabla-f1 tr:hover {
+  background-color: #333;
+}
+.tabla-f1 .abandono {
+  color: #ff4c4c;
+  font-weight: bold;
+}
+
+.destacados {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 20px;
@@ -205,69 +687,60 @@ form button:hover {
   max-width: 1000px;
   margin: auto;
 }
-
-.card {
+.destacados .card {
   background-color: #1c1c1c;
   border-radius: 12px;
   padding: 20px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.4);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-align: center;
 }
-
-.card:hover {
+.destacados .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 0 25px rgba(0,0,0,0.6);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
 }
-
-.card h3 a {
+.destacados .card h3 a {
   color: #00d2ff;
   text-decoration: none;
   font-size: 1.4rem;
 }
-
-.card h3 a:hover {
+.destacados .card h3 a:hover {
   text-decoration: underline;
 }
-
-.card p {
+.destacados .card p {
   color: #ccc;
   font-size: 0.95rem;
   margin-top: 10px;
 }
 
-/*Video index*/
 .video-container {
   position: relative;
-  padding-bottom: 56.25%; /* 16:9 */
+  padding-bottom: 56.25%;
   height: 0;
   overflow: hidden;
   max-width: 100%;
   margin: 20px auto;
 }
-
-.video-container iframe, 
-.video-container object, 
+.video-container iframe,
+.video-container object,
 .video-container embed {
   position: absolute;
-  top:0;
+  top: 0;
   left: 0;
   width: 100%;
   height: 100%;
 }
 
-/*Section carreras en index*/
 .carreras {
   max-width: 900px;
   margin: 40px auto;
   padding: 30px 20px;
   background-color: #1f1f1f;
   border-radius: 12px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.7);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
   color: #eee;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-
 .carreras h2 {
   font-size: 2.2rem;
   color: #00d2ff;
@@ -276,13 +749,11 @@ form button:hover {
   text-transform: uppercase;
   letter-spacing: 2px;
 }
-
 .carreras ul {
   list-style: none;
   padding-left: 0;
   font-size: 1.2rem;
 }
-
 .carreras ul li {
   background: linear-gradient(90deg, #00d2ff 0%, #3a47d5 100%);
   padding: 12px 20px;
@@ -292,127 +763,13 @@ form button:hover {
   transition: background 0.3s ease;
   cursor: default;
 }
-
-.carreras ul li strong {
+.carreras ul strong {
   font-weight: 700;
-  color: #fff;
+  color: white;
 }
-
-.carreras ul li:hover {
+.carreras ul:hover {
   background: linear-gradient(90deg, #3a47d5 0%, #00d2ff 100%);
   box-shadow: 0 0 15px rgba(0, 210, 255, 0.8);
 }
 
-
-@media (max-width: 768px) {
-/* HEADER MOBILE */
-header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px 15px;
-  text-align: center;
-}
-
-.logo {
-  max-width: 180px;
-  width: 100%;
-  height: auto;
-  margin-bottom: 15px; 
-}
-
-header h1 {
-  margin: 0;
-  padding: 0 10px;
-  font-size: 1.8rem;
-  color: #fff;
-  z-index: 1;
-}
-header p {
-  font-size: 1rem;
-  color: #ccc;
-  margin-bottom: 15px;
-}
-
- /* NAV MOBILE */
-nav {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  align-items: center;
-  width: 100%;
-}
-
-nav a {
-  text-decoration: none;
-  color: #00d2ff;
-  font-weight: 500;
-  background-color: #222;
-  padding: 10px 20px;
-  border-radius: 8px;
-  width: 90%;
-  max-width: 300px;
-  text-align: center;
-}
-
-  /* Tarjetas destacadas */
-  .destacados {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 15px;
-    padding: 20px;
-  }
-
-  .card {
-    padding: 15px;
-  }
-
-  /* Entrevista / video */
-  .video-container {
-    padding-bottom: 56.25%; /* ya responsive */
-    height: 0;
-    overflow: hidden;
-    position: relative;
-  }
-
-  .video-container iframe {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-  }
-
-  /* Lista de carreras */
-  .carreras ul {
-    padding: 0 15px;
-    font-size: 1rem;
-  }
-
-  .carreras h2,
-  .contenido h2 {
-    font-size: 1.6rem;
-    text-align: center;
-  }
-
-  /* Footer */
-  .footer {
-    text-align: center;
-    padding: 20px;
-  }
-
-  .pie {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 15px;
-  }
-
-  .pie a {
-    color: #00d2ff;
-    text-decoration: none;
-  }
-
-  .copy {
-    font-size: 0.85rem;
-    margin-top: 15px;
-  }
-}
+/*# sourceMappingURL=styles.css.map */

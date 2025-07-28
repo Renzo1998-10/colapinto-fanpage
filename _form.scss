@@ -1,0 +1,39 @@
+.formulario-container {
+  background-color: $color-bg-contact;
+  padding: 20px 25px;
+  border-radius: 8px;
+  @include shadow(0 0 10px rgba(0,0,0,0.1));
+  width: 100%;
+  max-width: 360px;
+
+  label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    color: #555;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: none;
+  }
+
+  button {
+    @extend %button-shared;
+    margin-top: 20px;
+    width: 100%;
+    background-color: $color-accent;
+    color: $color-text-main;
+    animation: pulse 2s infinite;
+
+    &:hover {
+      background-color: $color-accent-dark;
+      animation-play-state: paused;  // Pausa la animación al hacer hover para mejor UX
+    }
+  }
+}
+

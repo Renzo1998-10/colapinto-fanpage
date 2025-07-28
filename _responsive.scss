@@ -1,0 +1,577 @@
+/*Index*/
+@media (max-width: 768px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 15px;
+    text-align: center;
+
+    .logo {
+      max-width: 180px;
+      width: 100%;
+      height: auto;
+      margin-bottom: 15px;
+    }
+
+    h1 {
+      margin: 0;
+      padding: 0 10px;
+      font-size: 1.8rem;
+      color: $color-text-main;
+      z-index: 1;
+    }
+
+    p {
+      font-size: 1rem;
+      color: $color-text-secondary;
+      margin-bottom: 15px;
+    }
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+
+    a {
+      text-decoration: none;
+      color: $color-accent;
+      font-weight: 500;
+      background-color: $color-bg-footer;
+      padding: 10px 20px;
+      border-radius: 8px;
+      width: 90%;
+      max-width: 300px;
+      text-align: center;
+    }
+  }
+
+  .destacados {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 20px;
+
+    .card {
+      padding: 15px;
+    }
+  }
+
+  .video-container {
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    position: relative;
+
+    iframe {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .carreras ul {
+    padding: 0 15px;
+    font-size: 1rem;
+  }
+
+  .carreras h2,
+  .contenido h2 {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  .footer {
+    text-align: center;
+    padding: 20px;
+  }
+
+  .pie {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+
+    a {
+      color: $color-accent;
+      text-decoration: none;
+    }
+  }
+
+  .copy {
+    font-size: 0.85rem;
+    margin-top: 15px;
+  }
+}
+
+
+/*Biografia*/
+@media (max-width: 768px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 15px;
+    text-align: center;
+
+    .logo-link {
+      position: static; 
+      margin-bottom: 15px;
+    }
+
+    .logo {
+      max-width: 180px;
+      height: auto;
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      margin: 0 0 10px 0;
+    }
+
+    p {
+      font-size: 1rem;
+      color: #ccc;
+      margin-bottom: 15px;
+    }
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+
+    a {
+      text-decoration: none;
+      color: $color-accent; 
+      font-weight: 500;
+      background-color: #222;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-align: center;
+      width: 100%;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: lighten(#222, 10%);
+      }
+    }
+  }
+
+  main {
+    padding: 10px 15px;
+
+    section#bio {
+      p {
+        font-size: 1rem;
+        line-height: 1.4;
+      }
+
+      h2, h3 {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  footer.footer {
+    padding: 15px 10px;
+    text-align: center;
+
+    .txtFoot {
+      margin: 0 auto 15px auto;
+      max-width: 320px;
+    }
+
+    .pie {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 15px;
+
+      a {
+        color: $color-accent;
+        font-weight: 600;
+      }
+    }
+
+    .copy {
+      font-size: 0.85rem;
+      margin-top: 10px;
+      color: $color-text-muted;
+    }
+  }
+}
+
+/*Contacto*/
+@media (max-width: 768px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 15px;
+    text-align: center;
+
+    .logo-link {
+      position: static;
+      margin-bottom: 15px;
+    }
+
+    .logo {
+      max-width: 180px;
+      height: auto;
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      margin: 0 0 10px 0;
+    }
+
+    p {
+      font-size: 1rem;
+      color: #ccc;
+      margin-bottom: 15px;
+    }
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+
+    a {
+      text-decoration: none;
+      color: $color-accent;
+      font-weight: 500;
+      background-color: #222;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-align: center;
+      width: 100%;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: lighten(#222, 10%);
+      }
+    }
+  }
+
+  .formulario-container {
+    width: 90%;
+    max-width: 360px;
+    margin: 20px auto;
+    padding: 15px 20px;
+
+    h2 {
+      font-size: 1.8rem;
+      text-align: center;
+      margin-bottom: 15px;
+    }
+
+    form {
+      label {
+        font-size: 1rem;
+      }
+
+      input,
+      textarea {
+        font-size: 1rem;
+        padding: 10px;
+      }
+
+      button {
+        width: 100%;
+        padding: 12px;
+        font-size: 16px;
+      }
+    }
+  }
+
+  footer.footer {
+    padding: 15px 10px;
+    text-align: center;
+
+    .txtFoot {
+      margin: 0 auto 15px auto;
+      max-width: 320px;
+    }
+
+    .pie {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 15px;
+
+      a {
+        color: $color-accent;
+        font-weight: 600;
+      }
+    }
+
+    .copy {
+      font-size: 0.85rem;
+      margin-top: 10px;
+      color: $color-text-muted;
+    }
+  }
+}
+
+/*Galeria*/
+@media (max-width: 768px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 15px;
+    text-align: center;
+
+    .logo-link {
+      position: static;
+      margin-bottom: 15px;
+    }
+
+    .logo {
+      max-width: 180px;
+      height: auto;
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      margin: 0 0 10px 0;
+    }
+
+    p {
+      font-size: 1rem;
+      color: #ccc;
+      margin-bottom: 15px;
+    }
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+
+    a {
+      text-decoration: none;
+      color: $color-accent;
+      font-weight: 500;
+      background-color: #222;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-align: center;
+      width: 100%;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: lighten(#222, 10%);
+      }
+    }
+  }
+
+  section.galeria {
+    padding: 10px 15px;
+    max-width: 360px;
+    margin: 20px auto;
+
+    h2 {
+      font-size: 1.8rem;
+      text-align: center;
+      margin-bottom: 15px;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      margin-bottom: 10px;
+      border: 2px solid $color-text-main;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.3);
+    }
+  }
+
+  footer.footer {
+    padding: 15px 10px;
+    text-align: center;
+
+    .txtFoot {
+      margin: 0 auto 15px auto;
+      max-width: 320px;
+    }
+
+    .pie {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 15px;
+
+      a {
+        color: $color-accent;
+        font-weight: 600;
+      }
+    }
+
+    .copy {
+      font-size: 0.85rem;
+      margin-top: 10px;
+      color: $color-text-muted;
+    }
+  }
+}
+
+/*Resultados*/
+@media (max-width: 768px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 15px;
+    text-align: center;
+
+    .logo-link {
+      position: static;
+      margin-bottom: 15px;
+    }
+
+    .logo {
+      max-width: 180px;
+      height: auto;
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      margin: 0 0 10px 0;
+    }
+
+    p {
+      font-size: 1rem;
+      color: #ccc;
+      margin-bottom: 15px;
+    }
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+
+    a {
+      text-decoration: none;
+      color: $color-accent;
+      font-weight: 500;
+      background-color: #222;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-align: center;
+      width: 100%;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: lighten(#222, 10%);
+      }
+    }
+  }
+
+  main {
+    padding: 10px 15px;
+
+    section.resultados {
+      max-width: 360px;
+      margin: 0 auto 20px auto;
+
+      h2 {
+        font-size: 1.8rem;
+        text-align: center;
+        margin-bottom: 15px;
+      }
+
+      ul {
+        padding-left: 20px;
+        font-size: 1rem;
+
+        li {
+          margin-bottom: 10px;
+        }
+      }
+    }
+
+    section {
+      max-width: 360px;
+      margin: 0 auto 30px auto;
+
+      h2 {
+        font-size: 1.6rem;
+        margin-bottom: 15px;
+        text-align: center;
+      }
+
+      .tabla-f1 {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.9rem;
+        overflow-x: auto;
+        display: block; 
+
+        thead {
+          background-color: $color-bg-darker;
+        }
+
+        th,
+        td {
+          padding: 8px 6px;
+          border: 1px solid #444;
+          text-align: center;
+          white-space: nowrap;
+        }
+
+        td.abandono {
+          color: $color-abandono;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+  footer.footer {
+    padding: 15px 10px;
+    text-align: center;
+
+    .txtFoot {
+      margin: 0 auto 15px auto;
+      max-width: 320px;
+    }
+
+    .pie {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 15px;
+
+      a {
+        color: $color-accent;
+        font-weight: 600;
+      }
+    }
+
+    .copy {
+      font-size: 0.85rem;
+      margin-top: 10px;
+      color: $color-text-muted;
+    }
+  }
+}
+
+
