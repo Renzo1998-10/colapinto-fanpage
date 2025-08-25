@@ -1,7 +1,29 @@
 /* VARIABLES */
+@use 'variables' as *;
+@use 'mixins';
+@use 'header';
+@use 'footer';
+@use 'form';
+@use 'responsive';
+@use 'animations';
+@use 'placeholder';
 /* MIXINS */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono","Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+}
+main{
+  background-color: black;
+  color: white;
+}
+
 header {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/fondocolapinto.webp") no-repeat center center/cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/fondocolapinto.webp") no-repeat center center/cover;
   padding: 60px 20px;
   text-align: center;
   color: white;
@@ -10,6 +32,18 @@ header {
 h1 {
   margin: 0;
   font-size: 3rem;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+/* Ícono hamburguesa oculto por defecto */
+.menu-icon {
+  display: none;
+  font-size: 2rem;
+  cursor: default;
+  user-select: none;
 }
 
 .pie a {
@@ -35,9 +69,11 @@ h1 {
   font-size: 14px;
   color: #aaa;
 }
-
+.formulario-container h2 {
+  color: ;
+}
 .formulario-container {
-  background-color: #fff;
+  background-color: #fffdfd;
   padding: 20px 25px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -48,7 +84,7 @@ h1 {
   display: block;
   margin-top: 15px;
   margin-bottom: 5px;
-  color: #555;
+  color: #0e0d0d;
 }
 .formulario-container input,
 .formulario-container textarea {
@@ -69,6 +105,221 @@ h1 {
   background-color: #0056b3;
   animation-play-state: paused;
 }
+body {
+  font-family: $font-main;
+  margin: 0;
+  background-color: $color-bg-dark;
+  color: $color-text-main;
+}
+
+header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(5, 5, 5, 0.5)), url('../images/fondocolapinto.webp') no-repeat center center/cover;
+  padding: 60px 20px;
+  @include flex-center-column;
+  color: $color-text-main;
+}
+
+  h1 {
+    margin: 0;
+    font-size: 3rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+  }
+
+
+.logo-link {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 10;
+}
+
+.logo {
+  height: 250px;
+  width: auto;
+}
+
+h2, h3 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: rgba(221, 219, 219, 0.88);
+  text-align: center;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #444;
+  display: inline-block;
+  padding-bottom: 5px;
+  font-family: $font-alt;
+}
+
+nav {
+  text-align: center;
+  padding: 10px;
+}
+a {
+    color: $color-text-main;
+    margin: 0 15px;
+    text-decoration: none;
+  }
+&:hover {
+      text-decoration: underline;
+    }
+    
+
+section {
+  padding: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.galeria img {
+  max-width: 100%;
+  height: auto;
+  border: 2px solid $color-text-main;
+  margin-bottom: 10px;
+}
+
+
+
+
+.tabla-f1 {
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
+  border-collapse: collapse;
+  box-shadow: 0 0 20px rgba(0,0,0,0.6);
+}
+  th,
+  td {
+    padding: 12px 15px;
+    text-align: center;
+    border: 1px solid #333;
+  }
+
+  th {
+    background-color: $color-bg-footer;
+    color: $color-accent;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  tr:nth-child(even) {
+    background-color: #1a1a1a;
+  }
+
+  tr:hover {
+    background-color: #333;
+  }
+
+  .abandono {
+    color: $color-abandono;
+    font-weight: bold;
+  }
+
+
+.destacados {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+  .card{
+    background-color: $color-bg-darker;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: $shadow-card;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    }
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: $shadow-hover;
+    }
+
+    h3 a {
+      color: $color-accent;
+      text-decoration: none;
+      font-size: 1.4rem;
+    }
+      &:hover {
+        text-decoration: underline;
+      }
+    
+
+    p {
+      color: $color-text-secondary;
+      font-size: 0.95rem;
+      margin-top: 10px;
+    }
+
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  margin: 20px auto;
+}
+  iframe,
+  object,
+  embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+.carreras {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px 20px;
+  background-color: $color-bg-card;
+  border-radius: 12px;
+  box-shadow: $shadow-hover;
+  color: #eee;
+  font-family: $font-alt;
+}
+  h2 {
+    font-size: 2.2rem;
+    color: rgb(223, 221, 221);
+    margin-bottom: 25px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+    font-size: 1.2rem;
+  }
+    li {
+      background: linear-gradient(90deg, $color-accent 0%, #3a47d5 100%);
+      padding: 12px 20px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(58, 71, 213, 0.6);
+      transition: background 0.3s ease;
+      cursor: default;
+      }
+      
+
+      strong {
+        font-weight: 700;
+        color: $color-text-main;
+      }
+
+      &:hover {
+        background: linear-gradient(90deg, #3a47d5 0%, $color-accent 100%);
+        box-shadow: 0 0 15px rgba(0, 210, 255, 0.8);
+      }
+
 
 /*Index*/
 @media (max-width: 768px) {
@@ -432,6 +683,13 @@ h1 {
 }
 /*Resultados*/
 @media (max-width: 768px) {
+  header nav{
+    display: none;         
+    flex-direction: column;
+    width: 100%;
+    margin-top: 0.5rem;
+  
+  }
   header {
     display: flex;
     flex-direction: column;
@@ -456,6 +714,17 @@ h1 {
     color: #ccc;
     margin-bottom: 15px;
   }
+
+  #menu-toggle:checked + .menu-icon + nav {
+    display: flex;
+  }
+.menu-icon {
+    display: block;
+    position: absolute;
+    top: 5rem;
+    right: 1rem;
+    cursor: pointer;
+  }
   nav {
     display: flex;
     flex-direction: column;
@@ -474,7 +743,9 @@ h1 {
     text-align: center;
     width: 100%;
     transition: background-color 0.3s ease;
+    border-top: 1px solid #ccc;
   }
+
   nav a:hover {
     background-color: rgb(59.5, 59.5, 59.5);
   }
@@ -582,7 +853,7 @@ body {
 }
 
 header {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/fondocolapinto.webp") no-repeat center center/cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/fondocolapinto.webp") no-repeat center center/cover;
   padding: 60px 20px;
   display: flex;
   flex-direction: column;

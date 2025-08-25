@@ -1,11 +1,11 @@
-@import 'variables';
-@import 'mixins';
-@import 'header';
-@import 'footer';
-@import 'form';
-@import 'responsive';
-@import 'animations';
-@import 'placeholder';
+@use 'variables' as *;
+@use 'mixins';
+@use 'header';
+@use 'footer';
+@use 'form';
+@use 'responsive';
+@use 'animations';
+@use 'placeholder';
 
 
 
@@ -17,10 +17,11 @@ body {
 }
 
 header {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/fondocolapinto.webp') no-repeat center center/cover;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(5, 5, 5, 0.5)), url('../images/fondocolapinto.webp') no-repeat center center/cover;
   padding: 60px 20px;
   @include flex-center-column;
   color: $color-text-main;
+}
 
   h1 {
     margin: 0;
@@ -31,7 +32,7 @@ header {
     font-size: 1.2rem;
     margin-top: 10px;
   }
-}
+
 
 .logo-link {
   position: absolute;
@@ -60,17 +61,16 @@ h2, h3 {
 nav {
   text-align: center;
   padding: 10px;
-
+}
   a {
     color: $color-text-main;
     margin: 0 15px;
     text-decoration: none;
-
+  }
     &:hover {
       text-decoration: underline;
     }
-  }
-}
+    
 
 section {
   padding: 20px;
@@ -94,7 +94,7 @@ section {
   margin: auto;
   border-collapse: collapse;
   box-shadow: 0 0 20px rgba(0,0,0,0.6);
-
+}
   th,
   td {
     padding: 12px 15px;
@@ -121,7 +121,7 @@ section {
     color: $color-abandono;
     font-weight: bold;
   }
-}
+
 
 .destacados {
   display: grid;
